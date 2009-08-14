@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Saiko Gallery *Sinatra*</title>
+    <script type="text/javascript" src="prototype.js"></script>
+    <script type="text/javascript" src="effects.js"></script>
+    <script type="text/javascript" src="dragdrop.js"></script>
+    <script type="text/javascript" src="controls.js"></script>
+    <!-- Combo-handled YUI CSS files: --> 
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.7.0/build/reset-fonts-grids/reset-fonts-grids.css&2.7.0/build/base/base-min.css"> 
+    <link rel="stylesheet" type="text/css" href="jquery.treeview.css" ></link>
+    <link rel="stylesheet" href="saiko.css"></link>
+    <script src="jquery-1.2.3.min.js"></script>
+    <script>var $j=jQuery.noConflict();</script>
+    <script src="jquery.cookie.js"></script>
+    <script src="jquery.treeview.min.js"></script>
+  </head>
+  <body class="yui-skin-sam">
+
+    <div class="bg">
+      <div id="hd">
+        <div class="col1">
+          <div class="home-button">
+            <a href="/"><img src="/images/saikodelia/home.png" width="35" height="34" alt="home" /></a>
+          </div>
+          <div class="time clearfix">
+            site created: <%= Time.now.to_s %>
+          </div>
+        </div>
+        <div class="col2">
+          <div class="header-img clearfix">
+            <img src="/images/saikodelia/transparent.gif" id="replace-h" />
+          </div>
+        </div>
+        <div class="col3">
+          <div class="line clearfix">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="bd">
+        &nbsp;
+        <div class="bd-col1">
+          <div id="left" class="clearfix">&nbsp;</div>
+        </div>
+        <div class="bd-col2">
+          <div id="gallerynav" class="clearfix">
+            <ul id="browser3" class="galbrowser filetree treeview" style="display:none;">
+              <% for subitem in @tl.items %>
+                <% if subitem.is_a?(TvFolder) %>
+                  <%= erb :tvfolder, :locals => { :item => subitem, :update_target => 'galcontent' } %>
+                <% end %>
+                <% if subitem.is_a?(TvItem) %>
+                  <%= erb :tvitem, :locals => { :tvitem => subitem, :update_target =>  'galcontent' } %>
+                <% end %>
+              <% end %>
+            </ul>
+            <ul id="browser2" class="galbrowser filetree treeview">
+              <%= erb :tvfolder, :locals => { :item => @tl,  :update_target => 'galcontent' } %>
+            </ul>
+
+          </div>
+          <div style="display:block; height: 35px; background:transparent;">&nbsp;</div>
+        </div>
+        <div class="bd-col3">
+          <div id="galcontent" class="clearfix">
+            <div id="default-image">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+      <div id="ft"></div>
+    </div>
+    <script>
+      $j(document).ready(function() {
+        $j('#browser2').treeview();
+      });
+    </script>
+
+    <!-- this site would not have been possible without the help of my mentor Roger B. Andel.
+    this is what he showed me: mvc, localhost:3000, html, css, js, ruby on rails, camping, vim, unix, git, cybernetics, +30 years of cpu- and programming-history plus some other stuff... now i have to implement. 
+    he got hard times with me.. -->
+  </body>
+</html>
