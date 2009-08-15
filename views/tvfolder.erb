@@ -1,10 +1,7 @@
 <li class="closed expandable">
   <div class="hitarea closed-hitarea expandable-hitarea"></div>
-  <span class="folder">
-    <%= item.name %>
-  </span>
+  <span class="folder"><%= item.name %></span>
   <ul>
-
     <% for subitem in item.items %>
       <% if subitem.is_a?(TvFolder) %>
         <%= erb :tvfolder, :locals => { :item => subitem, :update_target => update_target } %>
@@ -13,7 +10,6 @@
         <%= erb :tvitem, :locals => { :tvitem => subitem, :update_target => update_target } %>
       <% end %>
     <% end %>
-
   </ul>
 </li>
 
