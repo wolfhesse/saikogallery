@@ -1,0 +1,157 @@
+html { 
+    background-image: url(/images/saikodelia/bg.png);
+    background-repeat: repeat-y;
+    background-color: black;
+  }
+
+  body {
+      margin:0px;
+      margin-bottom:-1px;
+      min-width:1100px;
+      line-height:1.4;
+      font-family:arial;
+      text-align:left;
+      background:transparent;
+      color:#fff;
+ }
+
+ .bg {
+     min-height:100%;
+     background-image:url(/images/saikodelia/bg.png);
+     background-repeat:repeat-y;
+}
+
+.clearfix { display:block; }
+.clear { clear:both; display:none; }
+
+#hd { height:150px; margin-bottom:5px; }
+.col1 { float:left; width:300px; }
+.col2 { float:right; width:460px; }
+.col3 { min-width:310px; margin-left:300px; margin-right:460px; }
+
+.home-button {
+    float:left;
+    padding:8px;
+}
+
+.time {
+    margin-left:20px;
+    height:40px;
+    padding-top:100px;
+    background-image:url(/images/saikodelia/logo-line.png);
+    background-repeat:repeat-x;
+    color:#fabd00;
+    text-align:left;
+    font-size:72%;
+    letter-spacing:1px;
+}
+
+.line {
+    height:120px;
+    background-image:url(/images/saikodelia/logo-line.png);
+    background-repeat:repeat-x;
+}
+.header-img { float:right; margin-right:20px; }
+img#replace-h { background:url(/images/saikodelia/logo.png); width:460px; height:140px; }
+
+.bd {
+    min-height:500px;
+ }
+
+ .bd-col1 { float:left; width:120px; }
+ .bd-col2 { float:right; width:224px; padding-right: 20px; }
+ .bd-col3 { min-width:650px; }
+
+ #gallerynav {
+     margin-left:20px;
+     margin-right:68px;
+     border-top:dotted 1px #fabd00;
+     border-bottom:dotted 1px #fabd00;
+     padding-top:10px;
+     padding-bottom:10px;
+     font-size:72%;
+     color:#fabd00;
+}
+
+ul li {
+    list-style-type: none
+}
+
+ul.galbrowser a { color:#fabd00; text-decoration:none; }
+ul.galbrowser a:hover { color:#fabd00; text-decoration:none; }
+ul.galbrowser a:active { color:#fabd00; font-weight:bold; text-decoration:none; }
+ul.galbrowser a:visited { color:#fabd00; text-decoration:none; }
+
+.filetree li { padding: 3px 0 2px 16px; }
+.filetree span.folder, .filetree span.file { margin-left:2px; padding: 0px 0 1px 20px; display: block; }
+
+.filetree span.folder {
+    background-image: url(/images/treeview/mods/orange/folder-or.png);
+    background-repeat: no-repeat;
+    background-position:top left;
+ }
+
+ .filetree span.folder:hover {
+     background-image: url(/images/treeview/mods/orange/folder-or.png);
+     background-repeat: no-repeat;
+     background-position:bottom left;
+ }
+
+ .filetree li.expandable span.folder {
+     background-image: url(/images/treeview/mods/orange/folder-or-closed.png);
+     background-repeat:no-repeat;
+     background-position:top left;
+ }
+
+ .filetree li.expandable span.folder:hover {
+     background-image: url(/images/treeview/mods/orange/folder-or-closed.png);
+     background-repeat:no-repeat;
+     background-position:bottom left;
+ }
+
+ .filetree span.file {
+     background-image: url(/images/treeview/mods/orange/file-or.png);
+     background-repeat:no-repeat;
+     background-position:top left;
+ }
+
+ .filetree span.file:hover {
+     background-image: url(/images/treeview/mods/orange/file-or.png);
+     background-repeat:no-repeat;
+     background-position:bottom left;
+ }
+
+ .treeview .hover { color: #fabd00; cursor: pointer; }
+
+ #galcontent {
+}
+
+#default-image {
+    min-height:571px;
+    background-image:url(/images/saikodelia/girl-star3.png);
+    background-repeat:no-repeat;
+    margin-left:150px;
+}
+
+#pic-holder {
+    margin-bottom:20px;
+    margin-left:150px;
+    margin-right:auto;
+    width:650px;
+}
+
+h3 { font-size:100%; font-weight:bold; }
+
+#ft {
+    height:40px;
+    margin-left:20px;
+    margin-right:66px;
+    border-top:solid 1px #fabd00;
+    width:auto;
+    background:transparent;
+    color:#fabd00;
+    text-align:right;
+    font-size:72%;
+    font-weight:normal;
+    clear:both;
+}

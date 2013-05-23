@@ -1,0 +1,153 @@
+<div id="idSu" style="float:right;padding:6px;border-color:green;border-style:solid;margin:4px;">
+    Up
+</div>
+<div id="idSd" style="float:right;padding:6px;border-color:red;border-style:solid;margin:4px;">
+    Down
+</div>
+search for something else (e.g. "cat", "news", "money"): <input id="idTag" type="text" value="wikilicious" /><a href="#" id="idExec">DoIt</a>
+<hr/>
+<table border="0">
+    <tr valign="top">
+        <td>
+            <div id="idList" style="border-color:yellow;border-style:solid;overflow:scroll;width:500px;max-height:600px;">
+                <table border="0">
+                    <tr valign="top">
+                        <td>
+                            tags: <ol id="idOlOut" />
+                        </td>
+                        <td>
+                            posts: <ol id="idOlPosts" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+        <td width="100%">
+            <div id="idS">
+                <iframe id="idIf">
+                </iframe>
+                <br/>
+            </div>
+            <div id="images">
+            </div>
+        </td>
+    </tr>
+</table>
+<hr/>
+<p>
+    <a href="http://feeds.feedburner.com/Delicious/tag/wikilicious"><img src="http://feeds.feedburner.com/~fc/Delicious/tag/wikilicious?bg=99CCFF&amp;fg=444444&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
+</p><h4>:) now, YOU have to close the feedback loop</h4>
+by using the information found here and tagging resources in del.icio.us<h5><a href="http://wikilicious.blogspot.com/">blog</a></h5>
+<script src="http://code.jquery.com/jquery-latest.js">
+</script>
+<script src="http://r20080614.appspot.com/static/jquery.hoverIntent.minified.js">
+</script>
+<script>
+    // docready-anf
+    $(document).ready(function(){
+    
+    });
+    // docready-end
+    
+    var $j = jQuery.noConflict();
+    
+    // a-anf
+    function a(){
+    
+        // qry-anf
+        function qry(s){
+            $j.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags=" + s + "&tagmode=any&format=json&jsoncallback=?", function(data){
+                $j("#images").empty();
+                if (0 == data.items.length) {
+                    $j("<div />").text("no flickr items (yet)").css("color", "red").appendTo("#images");
+                }
+                else {
+                    $j("<div />").text("items found, click to open: ").css("color", "green").appendTo("#images");
+                    $j("<br />").appendTo("#images");
+                    $j.each(data.items, function(i, item){
+                        var ii = $j("<img />").attr("src", item.media.m).attr("width", 120).attr("height", 80).attr("alt", item.link);
+                        $j("<a />").attr("href", item.link).append(ii).appendTo("#images");
+                        ii.hoverIntent(function(){
+                            $j("#idIf").attr("data-src", item.link);
+                        }, function(){
+                        });
+                        if (i == 6) 
+                            return false;
+                    });
+                }
+            });
+            qryTags(s);
+            qryPosts(s);
+        }
+        // qry-end
+        // qry-deli-anf
+        
+        function qryPosts(s){
+            $j.getJSON("http://feeds.delicious.com/v2/json/wikilicious/" + s + "?count=100&callback=?", function(deli){
+                $j("#idOlPosts").empty();
+                $j.each(deli, function(i, item){
+                    var a = $j("<a />").attr("href", item.u).text("there...");
+                    var l = $j("<li />").text(item.d + " (" + item.n + "), ");
+                    a.appendTo(l);
+                    a.hoverIntent(function(){
+                        $j("#idIf").attr("src", item.u);
+                        a.css("color", "red");
+                    }, function(){
+                        //$j("#ifIf").attr("src","about:blank");
+                        a.css("color", "green");
+                    });
+                    l.appendTo("#idOlPosts");
+                });
+            });
+        }
+        
+        function qryTags(s){
+            $j.getJSON("http://feeds.delicious.com/v2/json/tags/wikilicious?count=100&callback=?", function(deli){
+                $j("#idOlOut").empty();
+                $j.each(deli, function(i, item){
+                    var a = $j("<a />").attr("href", 'http://delicious.com/tag/' + i + " ").text(i);
+                    a.hoverIntent(function(){
+                        $j("#idTag").attr("value", i);
+                        qry(i);
+                        $j("#idIf").attr("src", 'http://delicious.com/tag/' + i);
+                    }, function(){
+                    });
+                    var l = $j("<li />").text(item + "* ");
+                    a.appendTo(l);
+                    l.appendTo("#idOlOut");
+                });
+            });
+        }
+        // qry-deli-end
+        
+        $j("#idExec").click(function(){
+            qry($j("#idTag").attr("value"));
+            
+        });
+        $j("#idSu").hoverIntent(function(){
+            $j("#idS").slideUp("fast");
+        }, function(){
+        });
+        $j("#idSd").hoverIntent(function(){
+            $j("#idS").slideDown("fast");
+        }, function(){
+        });
+        
+        $j("#idIf").css("height", 400).css("width", "100%");
+        
+        qry("wikilicious");
+        
+    }
+    
+    // a-end
+    
+    
+    
+    a();
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+    _uacct = "UA-2770529-1";
+    urchinTracker();
+</script>

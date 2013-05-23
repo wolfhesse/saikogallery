@@ -1,0 +1,62 @@
+{% if current_user %}
+<p>
+    <a href="{{ current_user.profile_url }}"><img src="http://graph.facebook.com/{{ current_user.id }}/picture?type=square"/></a>
+</p>
+<p>
+    Hello, {{ current_user.name|escape }}
+</p>
+{% endif %}
+<div id="fb-root">
+    <div>
+        <fb:board xid="anfrage_board" canpost="true" candelete="true" canmark="true" cancreatetopic="true" numtopics="15">
+            <fb:title>
+                Discuss the Titans of Anfrage
+            </fb:title>
+        </fb:board>
+        <div>
+            <fb:js-string var="chatInvite">
+                <fb:chat-invite msg="let's play a game!" condensed="false" exclude_ids="1,2,3"/>
+            </fb:js-string>
+            <div id="chat_invite_container">
+            </div>
+            <fb:login-button autologoutlink="true">
+            </fb:login-button>
+            <fb:bookmark type="on-facebook">
+            </fb:bookmark>
+        </div>
+        <div>
+            <fb:activity>
+            </fb:activity>
+            <fb:activity site="facebook.com" font="verdana" border_color="red" recommendations="true">
+            </fb:activity>
+            <fb:activity site="wikilicious.appspot.com" font="verdana" border_color="red" recommendations="true">
+            </fb:activity>
+            <fb:activity site="84.113.229.194" font="verdana" border_color="red" recommendations="true">
+            </fb:activity>
+        </div>
+    </div>
+    <hr/><fb:like/>
+</div>
+<script>
+    window.fbAsyncInit = function(){
+        FB.init({
+            appId: '{{ facebook_app_id }}',
+            status: true,
+            cookie: true,
+            xfbml: true
+        });
+        //FB.Event.subscribe('{% if current_user %}auth.logout{% else %}auth.login{% endif %}', function(response){
+        //    window.location.reload();
+        //});
+    };
+    (function(){
+        var e = document.createElement('script');
+        e.type = 'text/javascript';
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+        e.async = true;
+        document.getElementById('fb-root').appendChild(e);
+    }());
+</script>
+<script>
+    document.getElementById('chat_invite_container').setInnerFBML(chatInvite);
+</script>

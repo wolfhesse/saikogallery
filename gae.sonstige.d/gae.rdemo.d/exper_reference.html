@@ -1,0 +1,25 @@
+<style>
+    li {
+        list-style: decimal-leading-zero;
+    }
+</style>
+<h1>exper_reference</h1>
+<div>
+    <a href="?action=new">action:new</a>
+    | <a href="?action=delall">action:delall</a>
+</div>
+</h1>
+<ul>
+    {% for l in my_list %}
+    <li>
+        List: {{ l.name }}
+    </li>
+    <ul>
+        {% for n in l.myname_set %}
+        <li>
+            Short description: {{ n.short_desc}}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endfor %}
+</ul>

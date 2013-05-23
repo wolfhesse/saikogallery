@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<project default="default">
+    <description>
+        python script wrapper for Netbeans.
+    </description>
+    
+    <!--edit these values to customize your project.-->
+    <property name="winpythonpath" value="C:\Python25\"/>
+    <property name="mainscript" value="main.py"/>
+    <property name="backuppath" value="../../backups/backup"/>
+    
+    <!--
+    runs python main.py, showing the output on netbeans panel. use 
+    sys.stderr.write instead or print to get feedback.
+    -->
+    <target name="run" description="Run the project (not tested in windows)">
+        <exec executable="python" os="Linux">
+            <arg value="${mainscript}"/>
+        </exec>
+        <exec executable="${winpythonpath}python.exe" 
+              os="Windows XP,Windows NT,Windows 2000,Windows Vista">
+            <arg value="${mainscript}"/>
+        </exec>
+    </target>
+    <!--
+    run pylint if available to check for code inconsistencies.
+    you must add your modules as constants here.
+    -->
+    <target name="pylint" description="run pylint checks for code quality.">
+        <exec executable="pylint" os="Linux">
+            <!--no reports-->
+            <arg value="--reports=n"/>
+            <!--disable the following messages:
+            :R0903:too few public members
+            :W0613: *Unused argument %r*
+            :R0201: *Method could be a function*
+            :W0702: *No exception's type specified* 
+            :W0703: *Catch "Exception"*
+            -->
+            <arg value="--disable-msg=R0903,W0613,R0201,W0702,W0703"/>
+            <!--
+            module regular expression: when running pylint on ".", nbproject and
+            __init__ will have "" as their module name.
+            The regular expression will allow this to prevent unnecessary 
+            warnings.
+            -->
+            <arg value="--module-rgx=(([a-z_][a-z0-9_]*)|([A-Z][a-zA-Z0-9]+))?$"/>
+            <!--
+            pylint all folders
+            -->
+            <arg value="."/>
+        </exec>
+    </target>
+    <!--
+    backup (or build distribution) of this project. Update tar tarfile="..." for 
+    the desired path of your backup.
+    -->
+    <target name="backup" description="Backup project in ${project.backup_folder}">
+        <echo message="Edit build.xml to set your desired backup folder." 
+              level="info"/>
+        <exec executable="date" outputproperty="tardate">
+            <arg value="+%Y-%m-%d"/>
+        </exec>
+        <tar tarfile="${backuppath}-${tardate}.tar.gz" 
+             compression="gzip" basedir="." excludes="**/*.pyc,**/*.*~"/>
+    </target>
+    <!--
+    generate documentation with pydoc
+    -->
+    <target name="pydoc" description="Generate documentation with pydoc">
+        <echo message="All .html files in the root directory will be moved to pydoc/ !"
+              level="warn"/>
+        <echo message="If you need a README.html file, rename it to README.htm or it will be moved." 
+              level="warn"/>
+        <exec executable="pydoc" os="Linux">
+            <arg value="-w"/>
+            <arg value="./"/>
+        </exec>
+        <exec executable="${winpythonpath}python.exe" 
+              os="Windows XP,Windows NT,Windows 2000,Windows Vista">
+            <arg value="${winpythonpath}\Lib\pydoc.py"/>
+            <arg value="-w"/>
+            <arg value=".\"/>
+        </exec>
+        <!--delete previous documentation-->
+        <delete quiet="true">
+            <fileset includes="*.html" dir="pydoc"/>
+        </delete>
+        <echo/>
+        <!--move ALL html files in the root to pydoc.-->
+        <move todir="pydoc">
+            <fileset dir="." includes="*.html"/>
+        </move>
+        <echo/>
+        <!--launch web browser-->
+        <echo message="TODO:Launch web browser"/>
+    </target>
+    <!--
+    delete all .pyc files
+    -->
+    <target name="clean" description="Delete all .pyc files and documentation folder.">
+        <delete verbose="true" quiet="true" dir="pydoc"/>
+        <delete verbose="true" quiet="true">
+            <fileset includes="**/*.pyc" dir="."/>
+        </delete>
+    </target>
+</project>
+

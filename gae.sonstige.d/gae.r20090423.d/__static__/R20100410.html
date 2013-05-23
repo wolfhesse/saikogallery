@@ -1,0 +1,92 @@
+<!doctype html>
+<!-- The DOCTYPE declaration above will set the    -->
+<!-- browser's rendering engine into               -->
+<!-- "Standards Mode". Replacing this declaration  -->
+<!-- with a "Quirks Mode" doctype may lead to some -->
+<!-- differences in layout.                        -->
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+        <!--                                                               -->
+        <!-- Consider inlining CSS to reduce the number of requested files -->
+        <!--                                                               -->
+        <link type="text/css" rel="stylesheet" href="R20100410.css">
+        <link type="text/css" rel="stylesheet" href="rlayout.css">
+        <link type="text/css" rel="stylesheet" href="exper1.css">
+
+        <!--                                           -->
+        <!-- Any title is fine                         -->
+        <!--                                           -->
+        <title>Web Application Starter Project</title>
+
+        <!--                                           -->
+        <!-- This script loads your compiled module.   -->
+        <!-- If you add any GWT meta tags, they must   -->
+        <!-- be added before this line.                -->
+        <!--                                           -->
+        <script type="text/javascript" language="javascript"
+        src="r20100410/r20100410.nocache.js"></script>
+    </head>
+
+    <!--                                           -->
+    <!-- The body can have arbitrary html, or      -->
+    <!-- you can leave the body empty if you want  -->
+    <!-- to create a completely dynamic UI.        -->
+    <!--                                           -->
+    <body>
+        <!-- OPTIONAL: include this if you want history support -->
+        <iframe src="javascript:''" id="__gwt_historyFrame" tabIndex='-1'
+                style="position: absolute; width: 0; height: 0; border: 0"></iframe>
+
+        <!-- RECOMMENDED if your web app will not function without JavaScript enabled -->
+        <noscript>
+            <div
+                style="width: 22em; position: absolute; left: 50%; margin-left: -11em; color: red; background-color: white; border: 1px solid red; padding: 4px; font-family: sans-serif">
+                Your web browser must have JavaScript enabled in order for this
+                application to display correctly.</div>
+        </noscript>
+        <div id="titleContainer" class="rcontainer">
+            <h1>Web Application Starter Project</h1>
+        </div>
+        <div id='userOneContainer' class='rcontainer rleft'
+             style='border: thin red dashed; width: 400px;'>
+            <h3>user1</h3>
+            <table>
+                <tr>
+                    <td colspan="2" style="font-weight: bold;">Please enter your
+		name:</td>
+                </tr>
+                <tr>
+                    <td id="nameFieldContainer"></td>
+                    <td id="sendButtonContainer"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="color: red;" id="errorLabelContainer"></td>
+                </tr>
+            </table>
+        </div>
+        <div id='userTwoContainer' class='rcontainer rleft'
+             style='border: thin red dashed;'>
+            <h3>user2</h3>
+            <div id='developerContainer' class='rcontainer rleft'>
+                <ul>
+                    <li id='toogle-exper-h1-button-container'></li>
+                </ul>
+                <div id='exper-h1-test-div' class='rcontainer'>
+                    <h1 id='exper-h1-1' class='exper'>exper-h1-1</h1>
+                </div>
+            </div>
+        </div>
+        <div id='userThreeContainer' class='rcontainer rleft'>
+            <h3>user3</h3>
+            <div id='datepickerContainer' class='rcontainer rleft'>
+                <p id='temporaer_1'>einen Moment bitte...</p>
+            </div>
+        </div>
+        <div id='userFourContainer' class='rcontainer rleft'>
+            <h3>user4</h3>
+        </div>
+    </body>
+</html>

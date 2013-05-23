@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Echo Feed</title>
+ <subtitle>r20080614.appspot.com</subtitle>
+ <link href="http://r20080614.appspot.com/echo/" rel="self"/>
+ <link href="http://r20080614.appspot.com/"/>
+ <updated>{{ d }}</updated>
+ <author>
+   <name>wolf hesse</name>
+   <email>wolfgang.schuessel@gmail.com</email>
+ </author>
+ <id>urn:uuid:echo-{{ d }}</id>
+       {% for greeting in greetings %}
+ <entry>
+   <title>{{ greeting.content }}</title>
+   <subtitle>{{ greeting.data|escape }}</subtitle>
+   <link href="{{ greeting.content }}"/>
+   <id>urn:uuid:{{ greeting.date|escape }}</id>
+   <updated>{{ greeting.date|escape }}</updated>
+   <summary>{{ greeting.content }}</summary>
+ </entry>
+ 	  {% endfor %}
+</feed>

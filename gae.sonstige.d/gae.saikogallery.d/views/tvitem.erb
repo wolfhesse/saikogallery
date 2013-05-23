@@ -1,0 +1,10 @@
+<li>
+  <div class="item">
+    <span class='file'><%# link_to_remote tvitem.name, 
+        :url => {:controller => :gallery, :action => :load_image, :pimg => tvitem.img_name},
+        :update => update_target
+      %><a class="" onclick="new Ajax.Updater('galcontent', '/load_image?pimg=<%= tvitem.img_name %>', {asynchronous:true, evalScripts:true}); return false;" href="#"><%= tvitem.name %></a>
+    </span>
+  </div>
+</li>
+

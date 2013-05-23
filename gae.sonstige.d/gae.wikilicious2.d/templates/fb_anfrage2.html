@@ -1,0 +1,23 @@
+iframe
+{% if current_user %}
+<p>
+    <a href="{{ current_user.profile_url }}"><img src="http://graph.facebook.com/{{ current_user.id }}/picture?type=square"/></a>
+</p>
+<p>
+    Hello, {{ current_user.name|escape }}
+</p>
+{% endif %}
+<div id="fb-root-anfrage2">
+    <div>
+        root-anfrage2
+        <fb:bookmark type="on-facebook">
+        </fb:bookmark>
+        <fb:activity>
+        </fb:activity>
+        <fb:activity site="facebook.com" font="verdana" border_color="red" recommendations="true">
+        </fb:activity>
+        <fb:activity site="wikilicious.appspot.com" font="verdana" border_color="red" recommendations="true">
+        </fb:activity>
+    </div>
+    <hr/>
+</div>

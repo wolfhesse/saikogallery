@@ -1,0 +1,53 @@
+
+hole die die geocodiertent daten im json format
+interessant am ergebnis: callback-parameter
+
+curl 'http://pipes.yahoo.com/pipes/pipe.run?_id=ba6064745e0ff428b649d3942428646d&_render=json&feedurl=http%3A%2F%2Fspreadsheets.google.com%2Ffeeds%2Flist%2Fo15827994543594475320.7988319677712500711%2Fod6%2Fpublic%2Fbasic%3Falt%3Drss'
+
+curl 'http://pipes.yahoo.com/pipes/pipe.run?_id=ba6064745e0ff428b649d3942428646d&_render=json&feedurl=http%3A%2F%2Fspreadsheets.google.com%2Ffeeds%2Flist%2Fo15827994543594475320.7988319677712500711%2Fod6%2Fpublic%2Fbasic%3Falt%3Drss'
+
+this is the link location of the spreadsheet rss:
+
+http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic?alt=rss
+
+this is the link location of the pipe url:
+
+http://pipes.yahoo.com/rogera_se/ba6064745e0ff428b649d3942428646d
+
+let's try
+
+curl 'http://pipes.yahoo.com/pipes/pipe.run?_id=ba6064745e0ff428b649d3942428646d.7988319677712500711&_render=json'
+
+
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   297    0   297    0     0    786      0 --:--:-- --:--:-- --:--:--   786100   297    0   297    0     0    783      0 --:--:-- --:--:-- --:--:--     0
+{"count":0,"value":{"title":"Pipes Output","description":"Pipes Output","link":"http:\/\/pipes.yahoo.com\/pipes\/pipe.info?_id=ba6064745e0ff428b649d3942428646d.7988319677712500711","pubDate":"Wed, 13 Aug 2008 23:37:23 PDT","generator":"http:\/\/pipes.yahoo.com\/pipes\/","callback":"","items":[]}}
+
+add feedurl parameter...
+
+curl 'http://pipes.yahoo.com/pipes/pipe.run?_id=ba6064745e0ff428b649d3942428646d.7988319677712500711&_render=json&feedurl=http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic?alt=rss'
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   297    0   297    0     0    976      0 --:--:-- --:--:-- --:--:--   976100   297    0   297    0     0    971      0 --:--:-- --:--:-- --:--:--     0
+{"count":0,"value":{"title":"Pipes Output","description":"Pipes Output","link":"http:\/\/pipes.yahoo.com\/pipes\/pipe.info?_id=ba6064745e0ff428b649d3942428646d.7988319677712500711","pubDate":"Wed, 13 Aug 2008 23:39:24 PDT","generator":"http:\/\/pipes.yahoo.com\/pipes\/","callback":"","items":[]}}
+
+nope, lets curl the data alone:
+
+curl 'http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic?alt=rss'
+
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1095    0  1095    0     0   2582      0 --:--:-- --:--:-- --:--:--  2582100  2536    0  2536    0     0   5436      0 --:--:-- --:--:-- --:--:-- 34309
+<?xml version='1.0' encoding='UTF-8'?><rss xmlns:atom='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:gsx='http://schemas.google.com/spreadsheets/2006/extended' version='2.0'><channel><atom:id>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic</atom:id><lastBuildDate>Thu, 14 Aug 2008 06:13:13 +0000</lastBuildDate><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>Sheet1</title><description/><link>http://spreadsheets.google.com/pub?key=o15827994543594475320.7988319677712500711</link><managingEditor>rogeraaut@gmail.com (rogeraaut)</managingEditor><openSearch:totalResults>4</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><item><guid isPermaLink='false'>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic/cokwr</guid><atom:updated>2008-08-14T06:13:13.658Z</atom:updated><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>ffg</title><description>address: pater schwartz-gasse 11a, 1150 wien, at</description></item><item><guid isPermaLink='false'>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic/cpzh4</guid><atom:updated>2008-08-14T06:13:13.658Z</atom:updated><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>mhs77</title><description>address: mariahilferstrasse 77, 1060 wien, at</description></item><item><guid isPermaLink='false'>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic/cre1l</guid><atom:updated>2008-08-14T06:13:13.658Z</atom:updated><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>hg</title><description>address: margaretenplatz 6, 1050 wien, at</description></item><item><guid isPermaLink='false'>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic/chk2m</guid><atom:updated>2008-08-14T06:13:13.658Z</atom:updated><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>ga</title><description>address: anton baumgartner strasse 44, 1230 wien, at</description></item></channel></rss>
+
+and ignore stderror
+
+
+curl -s 'http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic?alt=rss'
+
+
+<?xml version='1.0' encoding='UTF-8'?><rss xmlns:atom='http://www.w3.org/2005/Atom' xmlns:openSearch='http://a9.com/-/spec/opensearchrss/1.0/' xmlns:gsx='http://schemas.google.com/spreadsheets/2006/extended' version='2.0'><channel><atom:id>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic</atom:id><lastBuildDate>Thu, 14 Aug 2008 06:13:13 +0000</lastBuildDate><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>Sheet1</title><description/><link>http://spreadsheets.google.com/pub?key=o15827994543594475320.7988319677712500711</link><managingEditor>rogeraaut@gmail.com (rogeraaut)</managingEditor><openSearch:totalResults>4</openSearch:totalResults><openSearch:startIndex>1</openSearch:startIndex><item><guid isPermaLink='false'>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic/cokwr</guid><atom:updated>2008-08-14T06:13:13.658Z</atom:updated><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>ffg</title><description>address: pater schwartz-gasse 11a, 1150 wien, at</description></item><item><guid isPermaLink='false'>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic/cpzh4</guid><atom:updated>2008-08-14T06:13:13.658Z</atom:updated><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>mhs77</title><description>address: mariahilferstrasse 77, 1060 wien, at</description></item><item><guid isPermaLink='false'>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic/cre1l</guid><atom:updated>2008-08-14T06:13:13.658Z</atom:updated><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>hg</title><description>address: margaretenplatz 6, 1050 wien, at</description></item><item><guid isPermaLink='false'>http://spreadsheets.google.com/feeds/list/o15827994543594475320.7988319677712500711/default/public/basic/chk2m</guid><atom:updated>2008-08-14T06:13:13.658Z</atom:updated><category domain='http://schemas.google.com/spreadsheets/2006'>http://schemas.google.com/spreadsheets/2006#list</category><title>ga</title><description>address: anton baumgartner strasse 44, 1230 wien, at</description></item></channel></rss>
+

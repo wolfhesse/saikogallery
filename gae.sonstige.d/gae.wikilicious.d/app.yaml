@@ -1,0 +1,42 @@
+application: wikilicious
+version: 5
+runtime: python
+api_version: 1
+
+default_expiration: "2h"
+
+builtins:
+- datastore_admin: on
+
+handlers:
+- url: /favicon.ico
+  static_files: static/images/favicon.ico
+  upload: static/images/favicon.ico
+  
+- url: /static
+  static_dir: static
+
+- url: /fb_anfrage.*
+  script: fb_anfrage.py
+  
+- url: /fb_anwaelte.*
+  script: fb_anwaelte.py
+  
+- url: /fb_augarten.*
+  script: fb_augarten.py
+  
+- url: /botendienst_fbconnect.*
+  script: botendienst_fbconnect.py
+  
+- url: /botendienst.*
+  script: fb_botendienst.py
+  
+- url: /wolfhesse.*
+  script: wolfhesse_fbconnect.py
+  
+- url: /.*
+  script: helloworld.py
+  
+- url: /admin/.*
+  script: $PYTHON_LIB/google/appengine/ext/admin
+  login: admin

@@ -1,0 +1,479 @@
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:yt="http://gdata.youtube.com/schemas/2007">
+   <channel>
+      <title>mhsfeed:1</title>
+      <description>he</description>
+      <link>http://pipes.yahoo.com/pipes/pipe.info?_id=ba6064745e0ff428b649d3942428646d</link>
+      <pubDate>Fri, 15 Aug 2008 00:52:49 PDT</pubDate>
+      <generator>http://pipes.yahoo.com/pipes/</generator>
+      <item>
+         <title>mhs:1</title>
+         <pubDate>1.1.2000</pubDate>
+         <link>http://www.google.com</link>   <description>mariahilferstrasse 1 wien, hausnummer: 1, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+           <content:encoded><![CDATA[
+           
+            sample<br /> 
+           
+           <img src="http://farm4.static.flickr.com/3081/2342309945_762cc6b5d1.jpg" alt='something'/>
+           
+           sample<br />
+           ]]></content:encoded>
+      
+         <guid isPermaLink="false">ase:gae:mh:r20080815:28</guid>
+         <geo:lat>48.202370</geo:lat>
+         <geo:long>16.361090</geo:long>
+       
+      </item>
+      <item>
+         <title>mhs:2</title>
+         <description>mariahilferstrasse 2 wien, hausnummer: 2, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201847</geo:lat>
+         <geo:long>16.360546</geo:long>
+      </item>
+      <item>
+         <title>mhs:3</title>
+         <description>mariahilferstrasse 3 wien, hausnummer: 3, fundstelle: FALSE, pickled: (dp0
+S'test'
+p1
+S'true'
+p2
+sS'name'
+p3
+S'show'
+p4
+s.</description>
+         <guid isPermaLink="false"></guid>
+      </item>
+      <item>
+         <title>mhs:4</title>
+         <description>mariahilferstrasse 4 wien, hausnummer: 4, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201748</geo:lat>
+         <geo:long>16.360422</geo:long>
+      </item>
+      <item>
+         <title>mhs:5</title>
+         <description>mariahilferstrasse 5 wien, hausnummer: 5, fundstelle: FALSE, pickled: (dp0
+S'hausnummer'
+p1
+I5
+sS'has_content'
+p2
+I00
+s.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201645</geo:lat>
+         <geo:long>16.360300</geo:long>
+      </item>
+      <item>
+         <title>mhs:6</title>
+         <description>mariahilferstrasse 6 wien, hausnummer: 6, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201645</geo:lat>
+         <geo:long>16.360300</geo:long>
+      </item>
+      <item>
+         <title>mhs:7</title>
+         <description>mariahilferstrasse 7 wien, hausnummer: 7, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201431</geo:lat>
+         <geo:long>16.359928</geo:long>
+      </item>
+      <item>
+         <title>mhs:8</title>
+         <description>mariahilferstrasse 8 wien, hausnummer: 8, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201447</geo:lat>
+         <geo:long>16.359962</geo:long>
+      </item>
+      <item>
+         <title>mhs:9</title>
+         <description>mariahilferstrasse 9 wien, hausnummer: 9, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+      </item>
+      <item>
+         <title>mhs:10</title>
+         <description>mariahilferstrasse 10 wien, hausnummer: 10, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201378</geo:lat>
+         <geo:long>16.359821</geo:long>
+      </item>
+      <item>
+         <title>mhs:11</title>
+         <description>mariahilferstrasse 11 wien, hausnummer: 11, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201183</geo:lat>
+         <geo:long>16.359352</geo:long>
+      </item>
+      <item>
+         <title>mhs:12</title>
+         <description>mariahilferstrasse 12 wien, hausnummer: 12, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201313</geo:lat>
+         <geo:long>16.359676</geo:long>
+      </item>
+      <item>
+         <title>mhs:13</title>
+         <description>mariahilferstrasse 13 wien, hausnummer: 13, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201157</geo:lat>
+         <geo:long>16.359280</geo:long>
+      </item>
+      <item>
+         <title>mhs:14</title>
+         <description>mariahilferstrasse 14 wien, hausnummer: 14, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201183</geo:lat>
+         <geo:long>16.359352</geo:long>
+      </item>
+      <item>
+         <title>mhs:15</title>
+         <description>mariahilferstrasse 15 wien, hausnummer: 15, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201065</geo:lat>
+         <geo:long>16.358938</geo:long>
+      </item>
+      <item>
+         <title>mhs:16</title>
+         <description>mariahilferstrasse 16 wien, hausnummer: 16, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201157</geo:lat>
+         <geo:long>16.359280</geo:long>
+      </item>
+      <item>
+         <title>mhs:17</title>
+         <description>mariahilferstrasse 17 wien, hausnummer: 17, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201035</geo:lat>
+         <geo:long>16.358789</geo:long>
+      </item>
+      <item>
+         <title>mhs:18</title>
+         <description>mariahilferstrasse 18 wien, hausnummer: 18, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.201050</geo:lat>
+         <geo:long>16.358864</geo:long>
+      </item>
+      <item>
+         <title>mhs:19</title>
+         <description>mariahilferstrasse 19 wien, hausnummer: 19, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200974</geo:lat>
+         <geo:long>16.358465</geo:long>
+      </item>
+      <item>
+         <title>mhs:20</title>
+         <description>mariahilferstrasse 20 wien, hausnummer: 20, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200970</geo:lat>
+         <geo:long>16.358440</geo:long>
+      </item>
+      <item>
+         <title>mhs:21</title>
+         <description>mariahilferstrasse 21 wien, hausnummer: 21, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200974</geo:lat>
+         <geo:long>16.358450</geo:long>
+      </item>
+      <item>
+         <title>mhs:22</title>
+         <description>mariahilferstrasse 22 wien, hausnummer: 22, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200821</geo:lat>
+         <geo:long>16.357796</geo:long>
+      </item>
+      <item>
+         <title>mhs:23</title>
+         <description>mariahilferstrasse 23 wien, hausnummer: 23, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200970</geo:lat>
+         <geo:long>16.358433</geo:long>
+      </item>
+      <item>
+         <title>mhs:24</title>
+         <description>mariahilferstrasse 24 wien, hausnummer: 24, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200642</geo:lat>
+         <geo:long>16.357075</geo:long>
+      </item>
+      <item>
+         <title>mhs:25</title>
+         <description>mariahilferstrasse 25 wien, hausnummer: 25, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200966</geo:lat>
+         <geo:long>16.358418</geo:long>
+      </item>
+      <item>
+         <title>mhs:26</title>
+         <description>mariahilferstrasse 26 wien, hausnummer: 26, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+      </item>
+      <item>
+         <title>mhs:27</title>
+         <description>mariahilferstrasse 27 wien, hausnummer: 27, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200867</geo:lat>
+         <geo:long>16.357983</geo:long>
+      </item>
+      <item>
+         <title>mhs:28</title>
+         <description>mariahilferstrasse 28 wien, hausnummer: 28, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200226</geo:lat>
+         <geo:long>16.355408</geo:long>
+      </item>
+      <item>
+         <title>mhs:29</title>
+         <description>mariahilferstrasse 29 wien, hausnummer: 29, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+      </item>
+      <item>
+         <title>mhs:30</title>
+         <description>mariahilferstrasse 30 wien, hausnummer: 30, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200157</geo:lat>
+         <geo:long>16.355185</geo:long>
+      </item>
+      <item>
+         <title>mhs:31</title>
+         <description>mariahilferstrasse 31 wien, hausnummer: 31, fundstelle: TRUE, pickled: (dp0
+S'items'
+p1
+(dp2
+S'lokal'
+p3
+S'Asia Cooking'
+p4
+ssS'wifi'
+p5
+I01
+s.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200642</geo:lat>
+         <geo:long>16.357075</geo:long>
+      </item>
+      <item>
+         <title>mhs:32</title>
+         <description>mariahilferstrasse 32 wien, hausnummer: 32, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200035</geo:lat>
+         <geo:long>16.354773</geo:long>
+      </item>
+      <item>
+         <title>mhs:33</title>
+         <description>mariahilferstrasse 33 wien, hausnummer: 33, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200535</geo:lat>
+         <geo:long>16.356634</geo:long>
+      </item>
+      <item>
+         <title>mhs:34</title>
+         <description>mariahilferstrasse 34 wien, hausnummer: 34, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200012</geo:lat>
+         <geo:long>16.354698</geo:long>
+      </item>
+      <item>
+         <title>mhs:35</title>
+         <description>mariahilferstrasse 35 wien, hausnummer: 35, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200493</geo:lat>
+         <geo:long>16.356445</geo:long>
+      </item>
+      <item>
+         <title>mhs:36</title>
+         <description>mariahilferstrasse 36 wien, hausnummer: 36, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.199913</geo:lat>
+         <geo:long>16.354328</geo:long>
+      </item>
+      <item>
+         <title>mhs:37</title>
+         <description>mariahilferstrasse 37 wien, hausnummer: 37, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200451</geo:lat>
+         <geo:long>16.356258</geo:long>
+      </item>
+      <item>
+         <title>mhs:38</title>
+         <description>mariahilferstrasse 38 wien, hausnummer: 38, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.199852</geo:lat>
+         <geo:long>16.354124</geo:long>
+      </item>
+      <item>
+         <title>mhs:39</title>
+         <description>mariahilferstrasse 39 wien, hausnummer: 39, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200409</geo:lat>
+         <geo:long>16.356070</geo:long>
+      </item>
+      <item>
+         <title>mhs:40</title>
+         <description>mariahilferstrasse 40 wien, hausnummer: 40, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+      </item>
+      <item>
+         <title>mhs:41</title>
+         <description>mariahilferstrasse 41 wien, hausnummer: 41, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200275</geo:lat>
+         <geo:long>16.355576</geo:long>
+      </item>
+      <item>
+         <title>mhs:42</title>
+         <description>mariahilferstrasse 42 wien, hausnummer: 42, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.199718</geo:lat>
+         <geo:long>16.353724</geo:long>
+      </item>
+      <item>
+         <title>mhs:43</title>
+         <description>mariahilferstrasse 43 wien, hausnummer: 43, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+      </item>
+      <item>
+         <title>mhs:44</title>
+         <description>mariahilferstrasse 44 wien, hausnummer: 44, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.199654</geo:lat>
+         <geo:long>16.353523</geo:long>
+      </item>
+      <item>
+         <title>mhs:45</title>
+         <description>mariahilferstrasse 45 wien, hausnummer: 45, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+      </item>
+      <item>
+         <title>mhs:46</title>
+         <description>mariahilferstrasse 46 wien, hausnummer: 46, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.199589</geo:lat>
+         <geo:long>16.353321</geo:long>
+      </item>
+      <item>
+         <title>mhs:47</title>
+         <description>mariahilferstrasse 47 wien, hausnummer: 47, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.200012</geo:lat>
+         <geo:long>16.354698</geo:long>
+      </item>
+      <item>
+         <title>mhs:48</title>
+         <description>mariahilferstrasse 48 wien, hausnummer: 48, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.199520</geo:lat>
+         <geo:long>16.353123</geo:long>
+      </item>
+      <item>
+         <title>mhs:49</title>
+         <description>mariahilferstrasse 49 wien, hausnummer: 49, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.199890</geo:lat>
+         <geo:long>16.354252</geo:long>
+      </item>
+      <item>
+         <title>mhs:50</title>
+         <description>mariahilferstrasse 50 wien, hausnummer: 50, fundstelle: FALSE, pickled: S''
+p0
+.</description>
+         <guid isPermaLink="false"></guid>
+         <geo:lat>48.199387</geo:lat>
+         <geo:long>16.352726</geo:long>
+      </item>
+   </channel>
+</rss>
+<!-- fe1.pipes.sp1.yahoo.com uncompressed Fri Aug 15 00:52:49 PDT 2008 -->

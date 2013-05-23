@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link type='text/css' rel='stylesheet' href='/static/stylesheets/main.css' />
+        <title>meme, rogeraaut:gae:r20080614</title>
+    </head>
+    <body>
+    <div style='font-size:110%;border:thin red dashed;'>
+    <h4>humor</h4>
+    <ul>
+    <li>from improved system's speed</li>
+    <li>from improved programmer productivity</li>
+    <li>how productive is your data?</li>
+    <li>philosophy:cybernetics, lifestyle of the informed (not necessarily successful)</li>
+    </ul>
+    <a href='http://r20080730.appspot.com'>r20080730</a><br />
+    <a href='http://rdemo.appspot.com'>rdemo</a><br />
+    <a href='http://mariahilferstrasse.appspot.com'>mhs</a><br />
+    
+    </div>
+    <h3>bookmarklet</h3>
+    <a href='/ase'>ase: andel software engineering</a>
+    <pre>
+    javascript:(function(){var%20script=document.createElement('script');script.src='http://r20080614.appspot.com/static/sample.js';document.getElementsByTagName('head')[0].appendChild(script);})()
+    </pre>
+    drag to bookmarks: <a href="javascript:(function(){var%20script=document.createElement('script');script.src='http://r20080614.appspot.com/static/sample.js';document.getElementsByTagName('head')[0].appendChild(script);})()">r20080614.sample</a>
+    <br />
+    ...could route to controller, do sg on gae, stream js back...
+    <h3>meme pages</h3>
+    <div id='meme_pages'>
+    <a href='ez'>erbsenzaehlen</a><br />
+    <a href='fruehlingsrolle'>fruehlingsrolle</a><br />
+    <a href='seidenschal'>seidenschal</a><br />
+    </div>
+        {% for greeting in greetings %}
+        {% if greeting.author %}
+        <b>{{ greeting.author.nickname }}</b> wrote:
+        {% else %}
+        An anonymous person wrote:
+        {% endif %}
+        <blockquote>{{ greeting.key.id}}:{{ greeting.content }}</blockquote>
+        {% endfor %}
+
+        <form action='/sign' method='post'>
+            <div><textarea name='content' rows='3' cols='60'></textarea></div>
+            <div><input type='submit' value='Sign Guestbook'></div>
+        </form>
+
+        <a href='{{ url }}'>{{ url_linktext }}</a>
+        <div>d: {{ d }}</div>
+        <div>dd: {{ dd}}</div>
+        <div>dtme: {{ dtme }}</div>
+        <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+            var pageTracker = _gat._getTracker("UA-1997188-5");
+            pageTracker._initData();
+            pageTracker._trackPageview();
+        </script>
+    </body>
+</html>

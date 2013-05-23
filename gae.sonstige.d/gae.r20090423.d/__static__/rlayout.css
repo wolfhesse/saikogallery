@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+.rcontainer {
+	border: thin navy dotted;
+}
+
+.rleft {
+	float: left;
+}

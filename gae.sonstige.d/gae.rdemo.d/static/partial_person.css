@@ -1,0 +1,44 @@
+<style>
+
+    html {
+        font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    }
+    
+    legend {
+        font-size: larger;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    fieldset {
+        padding: 1em;
+        font: 80% / 1 sans-serif;
+    }
+    
+    label {
+        float: left;
+        width: 100px;
+        margin-right: 0.5em;
+        padding-top: 0.2em;
+        text-align: right;
+        font-weight: bold;
+    }
+    
+    label {
+        font-size: 90%;
+        text-align: right;
+    }
+    
+    #access_token, #name {
+        font-size: x-large;
+    }
+    
+    .message {
+        background: yellow;
+        color: green;
+    }
+    
+    #ipt-text {
+        display: none;
+    }
+</style>

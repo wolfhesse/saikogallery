@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org">
+<title>erbsenzaehlen meme, rogeraaut:gae</title>
+<style type="text/css">
+.s {
+    border: solid;
+    border-width: thick;
+    border-color: #affecc;
+}
+
+.r {
+    float: right;
+}
+
+.b {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+}
+</style>
+</head>
+<body>
+<a href='..'>..</a><br />
+<h1>{{ erbsen_who.who.nickname }} zaehlt erbsen</h1>
+
+<img id='ball' class='b' src='/static/images/erbse_rosa_klein.jpg'>
+
+
+<p><a id="addErbsen" href="#" name="addErbsen">Erbsen</a></p>
+
+<div id="b" class="s">Anzahl: <span id="anzErbsenContent"></span>
+<a id='save' class='r' href='#'>Speichern!</a> 
+
+<p style='clear: both'></div>
+
+<a id="remErbsen" href="#" name="remErbsen">korrigieren</a> 
+
+<div>
+<h3>Top Ten</h3>
+
+{% for ea in erbsen_all %} {{ ea.who.nickname }} hat schon {{ ea.count }} Erbsen gezaehlt.<br>
+{% endfor %}</div>
+
+<p>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js">          
+</script>
+<script type="text/javascript">
+                var x = 0;
+                var y = 0;
+                var h = 10;
+                var v = 2;
+                var g = 2;
+                var r = 0;
+                var q = 0;
+                var gg = 0;
+                var Netscape=(navigator.appName.indexOf("Netscape") != -1);
+                //if(Netscape){document.captureEvents(Event.KEYPRESS);document.onkeypress = testKey;}
+
+                function moveball(){
+                    var e = document.getElementById('ball');
+                    v=v+g;r=q;q=y;if(y==r&&y>394&&g==5)return;
+                    x=x+h;y=y+v;
+                    if(x>752+(Netscape)*28){x=752+(Netscape)*28;h=h*-1;}
+                    if(y>408-(Netscape)*12){y=408-(Netscape)*12;v=v*-1;}
+                    if(x<0){x=0;h=h*-1;}
+                    if(v==-26&&gg==5){gg=0;g=5;}
+                    e.style.top=y + 'px';
+                    e.style.left=x + 'px';
+                    t=setTimeout("moveball()",50);
+                }
+
+// docready-anf
+$(document).ready(function(){
+
+        });
+// docready-end
+
+var $j = jQuery.noConflict();
+
+
+var erbsen = {{ erbsen_who.count }};
+
+    $j("#b").mouseover(function() {
+            if(erbsen!=1)
+            $j("#anzErbsenContent").text(""+erbsen+" Erbsen");  
+            else 
+            $j("#anzErbsenContent").text("Eine einzelne Erbse"); 
+            });
+
+$j("#b").mouseout(function(){
+        $j("#anzErbsenContent").text("");
+        });
+
+$j("#ball").click(function(){
+        erbsen = erbsen+1;
+        if(erbsen!=1)
+        $j("#anzErbsenContent").text(""+erbsen+" Erbsen");  
+        else 
+        $j("#anzErbsenContent").text("Eine einzelne Erbse"); 
+        return false;
+        });
+
+$j("#remErbsen").click(function(){
+        erbsen = erbsen-1;
+        if(erbsen!=1)
+        $j("#anzErbsenContent").text(""+erbsen+" Erbsen");  
+        else 
+        $j("#anzErbsenContent").text("Eine einzelne Erbse"); 
+        return false;  
+        });
+
+$j('#save').click( function(){
+        $j.post('/ez', { count: erbsen });
+        });
+
+t=setTimeout("moveball()",150);
+
+</script>
+</p>
+
+<small>using <a href=
+"http://www.aglasshalffull.org/css-resources/Bouncing-Ball-Animation-with-the-W3C-DOM.htm">
+bouncing ball</a>, tx</small> 
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-1997188-5");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+</script>
+
+</body>
+</html>
+

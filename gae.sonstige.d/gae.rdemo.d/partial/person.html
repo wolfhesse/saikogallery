@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="/static/partial_person.css" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/fonts/fonts-min.css" />
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.1/build/editor/assets/skins/sam/simpleeditor.css" />
+<!--Include YUI Loader: -->
+<script type="text/javascript" src="http://yui.yahooapis.com/2.8.1/build/yuiloader/yuiloader-min.js">
+</script>
+<!--Use YUI Loader to bring in your other dependencies: -->
+<script type="text/javascript">
+    // Instantiate and configure YUI Loader: 
+    (function(){
+        var loader = new YAHOO.util.YUILoader({
+            base: "",
+            require: ["reset", "containercore", "dom", "element", "event", "simpleeditor"],
+            loadOptional: false,
+            combine: true,
+            filter: "MIN",
+            allowRollup: true,
+            onSuccess: function(){
+                //alert('hi');
+                (function(){
+                    //Setup some private variables
+                    var Dom = YAHOO.util.Dom, Event = YAHOO.util.Event;
+                    
+                    //The SimpleEditor config
+                    var myConfig = {
+                        height: '300px',
+                        width: '500px',
+                        dompath: true,
+                        focusAtStart: true
+                    };
+                    
+                    //Now let's load the SimpleEditor..
+                    var myEditor = new YAHOO.widget.SimpleEditor('ipt-text', myConfig);
+                    myEditor.render();
+                })();
+            }
+        });
+        
+        // Load the files using the insert() method. 
+        loader.insert();
+    })();
+</script>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js'>
+</script>
+<body class="yui-skin-sam">
+    <h1><a href='/Person/{{person.id}}'>Person</a></h1>
+    <form id='f1' action='/Person/{{person.id}}?action=update' method=POST>
+        <fieldset>
+            <legend>
+                Personalia
+            </legend>
+            <label for='name'>
+                Name
+            </label>
+            <input name='name' type="text" value='{{ person.name}}'/>
+            <br/>
+            <label for='access_token'>
+                Access Token
+            </label>
+            <input name='access_token' type="text" value='{{ person.access_token }}' />
+            <br/>
+            <label for='comment'>
+                Comment
+            </label>
+            <textarea id='ipt-text' name='comment'>
+            </textarea>
+            <br/>
+            <input type='submit' />
+        </fieldset>
+    </form><hr/>
+    <div class='message'>
+        {{ message }}
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#ipt-text').text('{{person.comment}}');       
+        });
+    </script>
+</body>
